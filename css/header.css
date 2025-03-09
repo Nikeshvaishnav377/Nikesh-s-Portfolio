@@ -1,0 +1,95 @@
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  color: #6acbcb;
+  background-color: #A21E22;
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+ /* Import Google Font */
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+ /* Logo Styling */
+ .logo {
+     font-size: 28px;
+     font-family: 'Poppins', sans-serif;
+     color: #457E7E; /* Dark Red */
+     opacity: 0;
+     transform: translateY(-20px);
+     animation: fadeBounce 1s ease-in-out forwards;
+     transition: color 0.3s ease-in-out;
+ }
+ 
+ /* Hover Effect */
+ .logo:hover {
+     color: #457E7E; /* Soft Blue */
+ }
+ 
+ /* Simple Fade & Bounce Animation */
+ @keyframes fadeBounce {
+     0% {
+         opacity: 0;
+         transform: translateY(-20px);
+     }
+     50% {
+         opacity: 0.5;
+         transform: translateY(5px);
+     }
+     100% {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+nav ul {
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #6acbcb;
+}
+
+nav ul li a:hover {
+  color: #F7E6C4;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #457e7e;
+    text-align: center;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}

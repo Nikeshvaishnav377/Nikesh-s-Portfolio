@@ -1,0 +1,347 @@
+main {
+    margin-top: 100px;
+}
+
+
+
+main hr {
+    border: 0;
+    background-color: #457E7E;
+    height: 3px;
+    margin: 50px 5% 10px 5%;
+}
+
+/* for header */
+
+.firstsection {
+    color: #457E7E;
+    display: flex;
+    height: 60vh;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 50px 0;
+    padding: 20px;
+}
+
+.firstsection div {
+    font-size: 2rem;
+    width: 40%;
+}
+
+
+/* Slide-in Animation for Image */
+.rightsection img {
+    width: 100%;
+    max-width: 400px;
+    opacity: 0;
+    transform: translateX(100px);
+    animation: slideIn 1s ease-in-out forwards;
+}
+
+/* Keyframes for Slide-in */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.purple {
+    color: #A21E22;
+    font-size: 2.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#element {
+    font-size: 2.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #A21E22;
+
+}
+
+
+/* common css for all section */
+.about,
+.projects,
+.contact {
+    text-align: center;
+    width: 90%;
+    margin: auto;
+}
+
+
+/* for logo and icon */
+.contact a,
+i {
+    margin: 10px;
+}
+
+.x-logo {
+    text-decoration: none;
+    color: #A21E22;
+    font-size: 2.3rem;
+}
+
+/* Heading Styles */
+h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #234242;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* for button  */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    cursor: pointer;
+    background-color: #457E7E;
+    color: #A21E22;
+    text-decoration: none;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #A21E22;
+    color: #457E7E;
+}
+
+
+/* for about */
+
+/* General Section Styling */
+#about {
+    text-align: center;
+    padding-top: 70px;
+}
+
+.about-section {
+    text-align: center;
+    border-radius: 12px;
+    max-width: 90%;
+    margin: auto;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-container .btn {
+    background: #A21E22;
+    color: #457E7E;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+}
+
+.about-container .btn:hover {
+    color: #A21E22;
+    background: #457E7E;
+}
+
+/* Text Styles */
+.about-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+/* Box Styling */
+.about-box {
+    background: #457E7E;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.about-box h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.about-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-box ul li {
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+/* Reveal Animation */
+.about-box.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* for skill  */
+
+#skills {
+    text-align: center;
+    padding-top: 70px;
+}
+
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+    gap: 100px;
+}
+
+.skill-category {
+    padding: 20px;
+    border-radius: 10px;
+    background: #457E7E;
+    width: 400px;
+    
+}
+/* Initial state: Hidden and shifted down */
+.skill-category {
+    padding: 20px;
+    border-radius: 10px;
+    background: #457E7E;
+    width: 400px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Show when visible */
+.skill-category.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hide when scrolling back up */
+.skill-category.hide {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+
+.skill-category h3 {
+    color: #A21E22;
+    border-bottom: 2px solid #234242;
+    /* Yellow accent */
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-category li {
+    padding: 5px 0;
+    font-size: 16px;
+}
+
+
+/* Project Section */
+#projects {
+    text-align: center;
+    padding-top: 70px;
+}
+
+.projects {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+.project-content {
+    margin: auto;
+    width: 80%;
+    margin-bottom: 50px;
+}
+
+.project-card {
+    background-color: #457E7E;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.project-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-card.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.project-card .content {
+    height: 65%;
+}
+
+.project-card a {
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    color: #457E7E;
+    background: #A21E22;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.project-card a:hover {
+    background: #457E7E;
+    color: #A21E22;
+    border: 1px solid #A21E22;
+}
+
+/* for contact */
+
+
+#contact {
+    text-align: center;
+    padding-top: 70px;
+}
+
+
+.contact h3 {
+    color: #234242;
+    margin-top: 20px;
+}

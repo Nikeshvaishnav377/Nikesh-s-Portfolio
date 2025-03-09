@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color:  #BFA355;
+  color: #A21E22;
+  font-family: "Poppins", sans-serif;
+}
+
+
+footer {
+  background-color:  #234242;
+  color: #F7E6C4;
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px 20px;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 
+
+https://formspree.io/f/xvgkpwzo
+*/
